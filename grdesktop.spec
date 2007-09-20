@@ -1,16 +1,16 @@
 Summary: A gtk2 frontend for rdesktop
 Name: grdesktop
 Version: 0.23
-Release: %mkrel 4
+Release: %mkrel 5
 Group: Networking/Remote access
 License: GPL
 Source0: %{name}-%{version}.tar.bz2
+Patch: grdesktop-0.23-desktopentry.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 URL: http://www.nongnu.org/grdesktop/
 Requires: rdesktop
 BuildRequires: libgnomeui2-devel
 BuildRequires: scrollkeeper
-BuildRequires: desktop-file-utils
 BuildRequires: ImageMagick
 
 %description
@@ -21,6 +21,7 @@ the network for available terminal servers.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure2_5x --with-keymap-path=%_datadir/rdesktop/keymaps
@@ -50,11 +51,6 @@ cat >$RPM_BUILD_ROOT%{_menudir}/%{name} <<EOF
 	longtitle="Connect to Windows Terminal Servers" \
 	startup_notify="true" xdg="true"
 EOF
-desktop-file-install --vendor="" \
-  --remove-category="Application" \
-  --add-category="X-MandrivaLinux-Internet-RemoteAccess" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
