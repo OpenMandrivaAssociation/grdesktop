@@ -6,6 +6,7 @@ Group: Networking/Remote access
 License: GPL
 Source0: %{name}-%{version}.tar.bz2
 Patch: grdesktop-0.23-desktopentry.patch
+BuildRoot: %{_tmppath}/%{name}-%{version}-root
 URL: http://www.nongnu.org/grdesktop/
 Requires: rdesktop
 BuildRequires: libgnomeui2-devel
