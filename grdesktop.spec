@@ -40,17 +40,6 @@ ln -s %_datadir/pixmaps/%name/icon.png %buildroot%_liconsdir/%name.png
 convert -scale 32x32 pixmaps/icon.png %buildroot%_iconsdir/%name.png
 convert -scale 16x16 pixmaps/icon.png %buildroot%_miconsdir/%name.png
 
-install -d -m 755 $RPM_BUILD_ROOT%{_menudir}
-cat >$RPM_BUILD_ROOT%{_menudir}/%{name} <<EOF
-?package(%{name}): \
-	command="%{_bindir}/%{name}" \
-	needs="X11" \
-	section="Internet/Remote Access" \
-	icon="%name.png" \
-	title="Rdesktop" \
-	longtitle="Connect to Windows Terminal Servers" \
-	startup_notify="true" xdg="true"
-EOF
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -80,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pixmaps/grdesktop/
 %dir %_datadir/omf/grdesktop
 %_datadir/omf/grdesktop/%name-C.omf
-%_menudir/%name
 %_liconsdir/%name.png
 %_iconsdir/%name.png
 %_miconsdir/%name.png
