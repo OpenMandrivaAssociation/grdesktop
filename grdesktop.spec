@@ -11,7 +11,7 @@ URL: http://www.nongnu.org/grdesktop/
 Requires: rdesktop
 BuildRequires: libgnomeui2-devel
 BuildRequires: scrollkeeper
-BuildRequires: ImageMagick
+BuildRequires: imagemagick
 
 %description
 grdesktop is a frontend, written in C using the GTK+ 2 toolkit, for
