@@ -1,11 +1,12 @@
 Summary: A gtk2 frontend for rdesktop
 Name: grdesktop
 Version: 0.23
-Release: %mkrel 7
+Release: %mkrel 8
 Group: Networking/Remote access
-License: GPL
+License: GPLv2+
 Source0: %{name}-%{version}.tar.bz2
 Patch: grdesktop-0.23-desktopentry.patch
+Patch1: grdesktop-0.23-format-strings.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 URL: http://www.nongnu.org/grdesktop/
 Requires: rdesktop
@@ -22,6 +23,7 @@ the network for available terminal servers.
 %prep
 %setup -q
 %patch -p1
+%patch1 -p1
 
 %build
 %configure2_5x --with-keymap-path=%_datadir/rdesktop/keymaps
