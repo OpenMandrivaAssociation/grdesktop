@@ -1,7 +1,7 @@
 Summary: A gtk2 frontend for rdesktop
 Name: grdesktop
 Version: 0.23
-Release: %mkrel 8
+Release: %mkrel 9
 Group: Networking/Remote access
 License: GPLv2+
 Source0: %{name}-%{version}.tar.bz2
