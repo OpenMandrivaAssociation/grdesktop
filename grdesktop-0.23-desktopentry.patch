@@ -1,0 +1,18 @@
+--- grdesktop-0.23/grdesktop.desktop~	2003-11-12 15:47:22.000000000 +0100
++++ grdesktop-0.23/grdesktop.desktop	2007-09-20 09:39:05.000000000 +0200
+@@ -4,13 +4,12 @@ Comment=Connect to a remote Windows Term
+ Comment[de]=Verbindet zu einem entfernten Windows Terminal-Server
+ TryExec=grdesktop
+ Exec=grdesktop
+-Icon=grdesktop.png
++Icon=grdesktop
+ Terminal=false
+ Type=Application
+ Version=1.0
+ Actions=Full;
+-Categories=Application;Network;X-Red-Hat-Base;
+-Encoding=UTF-8
++Categories=GTK;GNOME;X-MandrivaLinux-Internet-RemoteAccess;Network;RemoteAccess;X-Red-Hat-Base;
+ 
+ [Desktop Action Full]
+ Exec=grdesktop
