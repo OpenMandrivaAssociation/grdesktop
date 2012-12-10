@@ -1,6 +1,6 @@
---- grdesktop-0.23/grdesktop.desktop~	2003-11-12 15:47:22.000000000 +0100
-+++ grdesktop-0.23/grdesktop.desktop	2007-09-20 09:39:05.000000000 +0200
-@@ -4,13 +4,12 @@ Comment=Connect to a remote Windows Term
+--- grdesktop-0.23/grdesktop.desktop.desktopentry	2003-11-12 17:47:22.000000000 +0300
++++ grdesktop-0.23/grdesktop.desktop	2012-11-01 17:15:28.026842609 +0400
+@@ -4,13 +4,13 @@ Comment=Connect to a remote Windows Term
  Comment[de]=Verbindet zu einem entfernten Windows Terminal-Server
  TryExec=grdesktop
  Exec=grdesktop
@@ -16,3 +16,4 @@
  
  [Desktop Action Full]
  Exec=grdesktop
++Name=Remotedesktop Client
