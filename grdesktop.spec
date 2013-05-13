@@ -9,7 +9,7 @@ Patch0: grdesktop-0.23-desktopentry.patch
 Patch1: grdesktop-0.23-format-strings.patch
 URL: http://www.nongnu.org/grdesktop/
 Requires: rdesktop
-BuildRequires: libgnomeui2-devel
+BuildRequires: pkgconfig(libgnomeui-2.0)
 BuildRequires: scrollkeeper
 BuildRequires: imagemagick
 
