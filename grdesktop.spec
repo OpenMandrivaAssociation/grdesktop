@@ -9,6 +9,11 @@ Patch0: grdesktop-0.23-desktopentry.patch
 Patch1: grdesktop-0.23-format-strings.patch
 URL: https://www.nongnu.org/grdesktop/
 Requires: rdesktop
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(libgnomeui-2.0)
 BuildRequires: scrollkeeper
 BuildRequires: imagemagick
